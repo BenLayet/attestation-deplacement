@@ -8,7 +8,8 @@
             [certificate]="certificate"
             (modifyRequested)="step=1"
             (validated)="step=3"></app-certificate-review>
-    <p *ngSwitchDefault (click)="step=1">
-        Non implémenté
-    </p>
+    <app-certificate
+            *ngSwitchCase="3"
+            [footerDisplayed]="true"
+            [certificate]="certificate"></app-certificate>
 </div>

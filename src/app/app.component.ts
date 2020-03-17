@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Certificate} from './certificate';
 
 @Component({
@@ -6,11 +6,8 @@ import {Certificate} from './certificate';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   certificate = new Certificate();
-  step = 2;
-
-  ngOnInit(): void {
-  }
+  step = 1;
 
 }

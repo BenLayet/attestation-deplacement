@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Certificate} from '../certificate';
-import { GoingOutReason } from '../going-out-reason.enum';
+import {GoingOutReason} from '../going-out-reason.enum';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-certificate-form',
   templateUrl: './certificate-form.component.html',
   styleUrls: ['./certificate-form.component.scss']
 })
-export class CertificateFormComponent implements OnInit {
+export class CertificateFormComponent {
 
-  certificate = new Certificate();
+  @Input()
+  certificate: Certificate;
+  @Output()
+  submitted = new EventEmitter();
   GoingOutReason = GoingOutReason;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  now = moment();
+  birthDateStartDate = moment('01/01/1970');
 
 }

@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -9,17 +9,25 @@ import {CertificateFormComponent} from './certificate-form/certificate-form.comp
 import {
     MAT_DATE_FORMATS,
     MAT_DATE_LOCALE,
+    MatButtonModule,
+    MatCheckboxModule,
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
 } from '@angular/material';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import {CertificateReviewComponent} from './certificate-review/certificate-review.component';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 
+// the second parameter 'fr' is optional
+registerLocaleData(localeFr, 'fr');
 @NgModule({
     declarations: [
         AppComponent,
-        CertificateFormComponent
+        CertificateFormComponent,
+        CertificateReviewComponent
     ],
     imports: [
         BrowserModule,
@@ -30,13 +38,19 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
         MatDatepickerModule,
         MatRadioModule,
         MatMomentDateModule,
-        MatInputModule
+        MatInputModule,
+        MatButtonModule,
+        MatCheckboxModule
     ],
     providers: [
+        {provide: LOCALE_ID, useValue: 'fr'},
         {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},
         {
             provide: MAT_DATE_FORMATS,
             useValue: {
+                parse: {
+                    dateInput: ['l', 'LL'],
+                },
                 display: {
                     dateInput: 'L',
                     monthYearLabel: 'MMM YYYY',

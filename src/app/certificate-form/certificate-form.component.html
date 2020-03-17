@@ -1,26 +1,27 @@
-<form >
-    <mat-form-field >
-        <mat-label>Mme/M.</mat-label>
-        <input matInput placeholder="Ex. M. Dupont" [(ngModel)]="certificate.name" name="name">
+<form  #form="ngForm"  (ngSubmit)="submitted.emit()">
+    <mat-form-field>
+        <mat-label>Mme / M.</mat-label>
+        <input matInput placeholder="Ex. M. Dupont" [(ngModel)]="certificate.name" name="name" required>
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label>Né(e) le</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="certificate.birthDate" name="birthDate">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <mat-label>Né(e) le :</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="certificate.birthDate" name="birthDate" required [max]="now">
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="multi-year" [startAt]="birthDateStartDate"></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field >
-        <mat-label>Demeurant</mat-label>
-        <textarea matInput placeholder="Ex. 1. av des Champs-Élysées, 75008 Paris" [(ngModel)]="certificate.address" name="address"></textarea>
+    <mat-form-field>
+        <mat-label>Demeurant :</mat-label>
+        <textarea matInput placeholder="Ex. 1. av des Champs-Élysées, 75008 Paris" [(ngModel)]="certificate.address"
+                  name="address" required></textarea>
     </mat-form-field>
 
     <label id="reason-label">Motif:</label>
     <mat-radio-group
             aria-labelledby="reason-label"
-            [(ngModel)]="certificate.reason" name="reason">
-        <mat-radio-button  [value]="GoingOutReason.WORK">activité professionnelle
+            [(ngModel)]="certificate.reason" name="reason" required>
+        <mat-radio-button [value]="GoingOutReason.WORK">activité professionnelle
         </mat-radio-button>
         <mat-radio-button [value]="GoingOutReason.SHOPPING">achats de première nécessité
         </mat-radio-button>
@@ -31,6 +32,7 @@
         <mat-radio-button [value]="GoingOutReason.FRESH_AIR">activité physique / animal de compagnie
         </mat-radio-button>
     </mat-radio-group>
+    <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid">Valider</button>
 </form>
 
 

@@ -3,27 +3,40 @@
   flex-direction: column;
   height: 100vh;
 
-  .preview {
-    border: 1px black solid;
-    margin: 1em;
-    padding: 1em;
+}
+
+.preview {
+  border: 1px black solid;
+  margin: 1em;
+  padding: 1em;
+  flex-grow: 1;
+  overflow-y: auto;
+  font-family: 'Open Sans', sans-serif;
+
+  .header {
+    text-align: center;
+  }
+
+  .section {
+    display: flex;
+  }
+
+  p.section__value {
     flex-grow: 1;
-    overflow-y: auto;
-    font-family: 'Open Sans', sans-serif;
+    opacity: 0.9;
+    border-bottom: 1px black dotted;
+  }
 
-    .section {
-      display: flex;
-    }
+  p.section__title {
+    width: 10em;
+    flex-basis: 10em;
+  }
 
-    p.section__value {
-      flex-grow: 1;
-      opacity: 0.9;
-      border-bottom: 1px black dotted;
-    }
+  .reason {
+    display: flex;
 
-    p.section__title {
-      width: 10em;
-      flex-basis: 10em;
+    mat-checkbox {
+      margin: 1em;
     }
   }
 }

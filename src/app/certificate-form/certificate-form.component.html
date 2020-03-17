@@ -32,7 +32,9 @@
         <mat-radio-button [value]="GoingOutReason.FRESH_AIR">activité physique / animal de compagnie
         </mat-radio-button>
     </mat-radio-group>
-    <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid">Valider</button>
+    <div class="button-bar">
+        <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid">Valider</button>
+    </div>
 </form>
 
 

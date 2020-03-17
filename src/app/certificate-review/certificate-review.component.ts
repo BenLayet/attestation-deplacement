@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {Certificate} from '../certificate';
-import { GoingOutReason } from '../going-out-reason.enum';
+import {SignaturePad} from 'angular2-signaturepad/signature-pad';
 
 @Component({
     selector: 'app-certificate-review',
@@ -16,4 +16,9 @@ export class CertificateReviewComponent {
     @Output()
     validated = new EventEmitter();
 
+    @ViewChild(SignaturePad, {static: true}) signaturePad: SignaturePad;
+
+    signComplete() {
+        this.certificate.signatureDataUrl = this.signaturePad.toDataURL();
+    }
 }

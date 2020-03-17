@@ -5,10 +5,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 form{
   display: flex;
   flex-direction: column;
-  max-width: 50em;
-  margin: auto;
 }
 mat-radio-group{
   display: flex;
   flex-direction: column;
+}
+*{
+  box-sizing: border-box;
 }

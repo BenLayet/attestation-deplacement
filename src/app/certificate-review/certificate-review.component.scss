@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-
+  padding: 1em;
 }
 
 .preview {
   border: 1px black solid;
-  margin: 1em;
   padding: 1em;
+  margin-bottom: 1em;
   flex-grow: 1;
   overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
@@ -37,6 +37,17 @@
 
     mat-checkbox {
       margin: 1em;
+    }
+  }
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  form{
+    align-items: stretch;
+    .button-bar{
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

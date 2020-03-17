@@ -12,7 +12,7 @@ import {
     MatButtonModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatFormFieldModule,
+    MatFormFieldModule, MatIconModule,
     MatInputModule,
     MatRadioModule,
 } from '@angular/material';
@@ -40,7 +40,8 @@ registerLocaleData(localeFr, 'fr');
         MatMomentDateModule,
         MatInputModule,
         MatButtonModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatIconModule
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'fr'},

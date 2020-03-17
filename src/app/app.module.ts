@@ -6,7 +6,15 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {CertificateFormComponent} from './certificate-form/certificate-form.component';
-import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatRadioModule} from '@angular/material';
+import {
+    MAT_DATE_FORMATS,
+    MAT_DATE_LOCALE,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule
+} from '@angular/material';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
 @NgModule({
     declarations: [
@@ -21,10 +29,23 @@ import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateMo
         FormsModule,
         MatDatepickerModule,
         MatRadioModule,
-        MatNativeDateModule,
+        MatMomentDateModule,
         MatInputModule
     ],
-    providers: [],
+    providers: [
+        {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},
+        {
+            provide: MAT_DATE_FORMATS,
+            useValue: {
+                display: {
+                    dateInput: 'L',
+                    monthYearLabel: 'MMM YYYY',
+                    dateA11yLabel: 'LL',
+                    monthYearA11yLabel: 'MMMM YYYY',
+                },
+            },
+        },
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

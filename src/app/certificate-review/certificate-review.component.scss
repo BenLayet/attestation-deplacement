@@ -13,36 +13,6 @@
   overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
 
-  h1{
-    font-size: 1.5em;
-  }
-
-  .header {
-    text-align: center;
-  }
-
-  .section {
-    display: flex;
-  }
-
-  p.section__value {
-    flex-grow: 1;
-    opacity: 0.9;
-    border-bottom: 1px black dotted;
-  }
-
-  p.section__title {
-    width: 10em;
-    flex-basis: 10em;
-  }
-
-  .reason {
-    display: flex;
-
-    mat-checkbox {
-      margin: 1em;
-    }
-  }
 }
 .footer{
   display: flex;

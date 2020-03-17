@@ -20,6 +20,7 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {CertificateReviewComponent} from './certificate-review/certificate-review.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { CertificateComponent } from './certificate/certificate.component';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
@@ -27,7 +28,8 @@ registerLocaleData(localeFr, 'fr');
     declarations: [
         AppComponent,
         CertificateFormComponent,
-        CertificateReviewComponent
+        CertificateReviewComponent,
+        CertificateComponent
     ],
     imports: [
         BrowserModule,

@@ -8,7 +8,7 @@ import {Certificate} from './certificate';
 })
 export class AppComponent implements OnInit {
   certificate = new Certificate();
-  step = 1;
+  step = 2;
 
   ngOnInit(): void {
   }

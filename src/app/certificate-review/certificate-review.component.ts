@@ -16,5 +16,4 @@ export class CertificateReviewComponent {
     @Output()
     validated = new EventEmitter();
 
-    GoingOutReason = GoingOutReason;
 }

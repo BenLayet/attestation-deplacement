@@ -8,4 +8,5 @@ export class Certificate {
     reason: GoingOutReason;
     date: Moment;
     location: string;
+    signatureDataUrl: string;
 }

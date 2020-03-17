@@ -1,0 +1,14 @@
+<div [ngSwitch]="step">
+    <app-certificate-form
+            *ngSwitchCase="1"
+            [certificate]="certificate"
+            (submitted)="step=2"></app-certificate-form>
+    <app-certificate-review
+            *ngSwitchCase="2"
+            [certificate]="certificate"
+            (modifyRequested)="step=1"
+            (validated)="step=3"></app-certificate-review>
+    <p *ngSwitchDefault (click)="step=1">
+        Non implémenté
+    </p>
+</div>

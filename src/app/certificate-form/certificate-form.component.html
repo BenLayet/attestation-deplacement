@@ -20,27 +20,15 @@
     <mat-radio-group
             aria-labelledby="reason-label"
             [(ngModel)]="certificate.reason" name="reason">
-        <mat-radio-button  [value]="GoingOutReason.WORK">
-            déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle,
-            lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées
-            sous forme de télétravail (sur justificatif permanent) ou déplacements
-            professionnels ne pouvant être différés ;
+        <mat-radio-button  [value]="GoingOutReason.WORK">activité professionnelle
         </mat-radio-button>
-        <mat-radio-button [value]="GoingOutReason.SHOPPING">
-            déplacements pour effectuer des achats de première nécessité dans des
-            établissements autorisés (liste sur gouvernement.fr);
+        <mat-radio-button [value]="GoingOutReason.SHOPPING">achats de première nécessité
         </mat-radio-button>
-        <mat-radio-button [value]="GoingOutReason.HEALTH">
-            déplacements pour motif de santé;
+        <mat-radio-button [value]="GoingOutReason.HEALTH">santé
         </mat-radio-button>
-        <mat-radio-button [value]="GoingOutReason.COMPELLING_FAMILY_REASON">
-            déplacements pour motif familial impérieux, pour l’assistance aux personnes
-            vulnérables ou la garde d’enfants ;
+        <mat-radio-button [value]="GoingOutReason.COMPELLING_FAMILY_REASON">motif familial impérieux
         </mat-radio-button>
-        <mat-radio-button [value]="GoingOutReason.FRESH_AIR">
-            déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle
-            des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins
-            des animaux de compagnie.
+        <mat-radio-button [value]="GoingOutReason.FRESH_AIR">activité physique / animal de compagnie
         </mat-radio-button>
     </mat-radio-group>
 </form>

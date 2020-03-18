@@ -8,5 +8,5 @@ import {Certificate} from './certificate';
 })
 export class AppComponent {
   certificate = new Certificate();
-  step = 2;
+  step = 1;
 }

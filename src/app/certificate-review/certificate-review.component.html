@@ -16,7 +16,7 @@
             </mat-form-field>
         </div>
         Signature :
-        <signature-pad (onEndEvent)="signComplete()"></signature-pad>
-        <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid && !!certificate.signatureDataUrl">Valider</button>
+        <signature-pad #signaturePad (onEndEvent)="signComplete()"></signature-pad>
+        <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid || !certificate.signatureDataUrl">Valider</button>
     </form>
 </div>

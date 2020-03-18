@@ -1,7 +1,11 @@
 .warning{
-
   border: 1px red solid;
   background-color: rgba(255,0,0, 0.5);
   padding:1em;
   text-align: center;
+}
+@media print {
+  .warning{
+    display: none;
+  }
 }

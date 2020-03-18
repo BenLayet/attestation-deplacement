@@ -16,6 +16,6 @@ export class CertificateFormComponent {
   submitted = new EventEmitter();
   GoingOutReason = GoingOutReason;
   now = moment();
-  birthDateStartDate = moment('01/01/1970');
+  birthDateStartDate = moment(new Date(0));
 
 }

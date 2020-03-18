@@ -6,7 +6,7 @@
 
     <mat-form-field hideRequiredMarker>
         <mat-label>Né(e) le :</mat-label>
-        <input matInput [matDatepicker]="picker //noinspection InvalidExpressionResultType" [(ngModel)]="certificate.birthDate" name="birthDate" required [max]="now">
+        <input matInput [matDatepicker]="picker //noinspection InvalidExpressionResultType" [(ngModel)]="certificate.birthDate" name="dateOfBirth" required [max]="now">
         <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
         <mat-datepicker #picker startView="multi-year" [startAt]="birthDateStartDate"></mat-datepicker>
     </mat-form-field>
@@ -36,7 +36,6 @@
         <button type="submit" mat-button mat-raised-button color="primary" [disabled]="form.invalid">Valider</button>
     </div>
 </form>
-
 
 
 

@@ -1,4 +1,5 @@
 import {GoingOutReason} from './going-out-reason.enum';
+import * as moment from 'moment';
 import {Moment} from 'moment';
 
 export class Certificate {
@@ -6,7 +7,7 @@ export class Certificate {
     birthDate: Moment;
     address: string;
     reason: GoingOutReason;
-    date: Moment;
+    date: Moment = moment();
     location: string;
     signatureDataUrl: string;
 }

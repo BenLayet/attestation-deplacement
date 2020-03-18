@@ -20,6 +20,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { CertificateComponent } from './certificate/certificate.component';
 import {SignaturePadModule} from 'angular2-signaturepad';
+import {MatCardModule} from '@angular/material/card';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
@@ -43,7 +44,8 @@ registerLocaleData(localeFr, 'fr');
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
-        SignaturePadModule
+        SignaturePadModule,
+        MatCardModule
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'fr'},

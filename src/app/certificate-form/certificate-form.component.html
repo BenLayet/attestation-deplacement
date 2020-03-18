@@ -1,17 +1,17 @@
 <form  #form="ngForm"  (ngSubmit)="submitted.emit()">
-    <mat-form-field>
+    <mat-form-field hideRequiredMarker>
         <mat-label>Mme / M.</mat-label>
         <input matInput placeholder="Ex. M. Dupont" [(ngModel)]="certificate.name" name="name" required>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field hideRequiredMarker>
         <mat-label>Né(e) le :</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="certificate.birthDate" name="birthDate" required [max]="now">
+        <input matInput [matDatepicker]="picker //noinspection InvalidExpressionResultType" [(ngModel)]="certificate.birthDate" name="birthDate" required [max]="now">
         <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
         <mat-datepicker #picker startView="multi-year" [startAt]="birthDateStartDate"></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field hideRequiredMarker>
         <mat-label>Demeurant :</mat-label>
         <textarea matInput placeholder="Ex. 1. av des Champs-Élysées, 75008 Paris" [(ngModel)]="certificate.address"
                   name="address" required></textarea>

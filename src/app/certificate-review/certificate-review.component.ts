@@ -16,7 +16,8 @@ export class CertificateReviewComponent {
     @Output()
     validated = new EventEmitter();
 
-    @ViewChild(SignaturePad, {static: true}) signaturePad: SignaturePad;
+    @ViewChild('signaturePad')
+    signaturePad: SignaturePad;
 
     signComplete() {
         this.certificate.signatureDataUrl = this.signaturePad.toDataURL();

@@ -6,16 +6,14 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {CertificateFormComponent} from './certificate-form/certificate-form.component';
-import {
-    MAT_DATE_FORMATS,
-    MAT_DATE_LOCALE,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatFormFieldModule, MatIconModule,
-    MatInputModule,
-    MatRadioModule,
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {CertificateReviewComponent} from './certificate-review/certificate-review.component';
 import { registerLocaleData } from '@angular/common';
